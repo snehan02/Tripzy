@@ -1,0 +1,48 @@
+
+
+.tour-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top:10px;
+}
+
+
+
+.tour-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.tour-bottom span {
+  color: #ff7e01;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+
+
+.book-btn {
+  background: #ff7e01;
+  color: white;
+
+  border: none;
+  border-radius: 30px;
+
+  padding: 10px 20px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  background: #e66f00;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "Goa Beach Escape",
+    "country": "India",
+    "state": "Goa",
+    "duration": "5 Days",
+    "price": 24999,
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2"
+  },
+  {
+    "id": 2,
+    "title": "Kashmir Paradise",
+    "country": "India",
+    "state": "Jammu & Kashmir",
+    "duration": "6 Days",
+    "price": 34999,
+    "image": "https://images.unsplash.com/photo-1595815771614-ade9d652a65d"
+  },
+  {
+    "id": 3,
+    "title": "Coorg Nature Retreat",
+    "country": "India",
+    "state": "Karnataka",
+    "duration": "4 Days",
+    "price": 19999,
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+  },
+  {
+    "id": 4,
+    "title": "Sydney Adventure",
+    "country": "Australia",
+    "state": "New South Wales",
+    "duration": "7 Days",
+    "price": 94999,
+    "image": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be"
+  },
+  {
+    "id": 5,
+    "title": "Melbourne Discovery",
+    "country": "Australia",
+    "state": "Victoria",
+    "duration": "5 Days",
+    "price": 79999,
+    "image": "https://images.unsplash.com/photo-1514395462725-fb4566210144"
+  },
+  {
+    "id": 6,
+    "title": "Gold Coast Holiday",
+    "country": "Australia",
+    "state": "Queensland",
+    "duration": "6 Days",
+    "price": 84999,
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": 7,
+    "title": "New York Highlights",
+    "country": "USA",
+    "state": "New York",
+    "duration": "6 Days",
+    "price": 89999,
+    "image": "https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2"
+  },
+  {
+    "id": 8,
+    "title": "California Coast Tour",
+    "country": "USA",
+    "state": "California",
+    "duration": "7 Days",
+    "price": 99999,
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+  },
+  {
+    "id": 9,
+    "title": "Las Vegas Experience",
+    "country": "USA",
+    "state": "Nevada",
+    "duration": "4 Days",
+    "price": 74999,
+    "image": "https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d"
+  },
+  {
+    "id": 10,
+    "title": "Toronto Explorer",
+    "country": "Canada",
+    "state": "Ontario",
+    "duration": "5 Days",
+    "price": 74999,
+    "image": "https://images.unsplash.com/photo-1517935706615-2717063c2225"
+  },
+  {
+    "id": 11,
+    "title": "Vancouver Nature Escape",
+    "country": "Canada",
+    "state": "British Columbia",
+    "duration": "6 Days",
+    "price": 82999,
+    "image": "https://images.unsplash.com/photo-1505765050516-f72dcac9c60b"
+  },
+  {
+    "id": 12,
+    "title": "Montreal City Tour",
+    "country": "Canada",
+    "state": "Quebec",
+    "duration": "4 Days",
+    "price": 69999,
+    "image": "https://images.unsplash.com/photo-1516490981167-dc990a242afe"
+  },
+  {
+    "id": 13,
+    "title": "Paris Getaway",
+    "country": "Europe",
+    "state": "France",
+    "duration": "7 Days",
+    "price": 69999,
+    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34"
+  },
+  {
+    "id": 14,
+    "title": "Swiss Adventure",
+    "country": "Europe",
+    "state": "Switzerland",
+    "duration": "6 Days",
+    "price": 79999,
+    "image": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2"
+  },
+  {
+    "id": 15,
+    "title": "Rome Historical Tour",
+    "country": "Europe",
+    "state": "Italy",
+    "duration": "5 Days",
+    "price": 72999,
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5"
+  },
+  {
+    "id": 16,
+    "title": "Santorini Escape",
+    "country": "Europe",
+    "state": "Greece",
+    "duration": "5 Days",
+    "price": 65999,
+    "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff"
+  }
+]

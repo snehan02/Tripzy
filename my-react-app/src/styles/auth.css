@@ -1,0 +1,107 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* LEFT SIDE */
+
+.auth-left {
+  flex: 1;
+  background:
+    linear-gradient(
+      rgba(11,39,39,.75),
+      rgba(11,39,39,.75)
+    ),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+}
+
+.auth-left h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.auth-left p {
+  font-size: 1.2rem;
+  max-width: 450px;
+  line-height: 1.8;
+}
+
+/* RIGHT SIDE */
+
+.auth-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+.auth-card {
+  width: 450px;
+  background: white;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.auth-card h2 {
+  margin-bottom: 30px;
+  color: #0b2727;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-card input {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  outline: none;
+}
+
+.auth-card input:focus {
+  border-color: #ff7e01;
+}
+
+.auth-card button {
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #ff7e01;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+h1 span{
+  color:orange;
+}
+
+
+.auth-card button:hover {
+  background: #e86f00;
+}
+
+.auth-card p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.auth-card a {
+  color: #ff7e01;
+  text-decoration: none;
+  font-weight: 600;
+}
