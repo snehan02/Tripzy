@@ -7,6 +7,7 @@ function Login() {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const users = [
     {
@@ -27,16 +28,11 @@ function Login() {
     e.preventDefault();
 
     const validUser = users.find(
-      (user) =>
-        user.username === username &&
-        user.password === password
+      (user) => user.username === username && user.password === password,
     );
 
     if (validUser) {
-      localStorage.setItem(
-        "user",
-        JSON.stringify(validUser)
-      );
+      localStorage.setItem("user", JSON.stringify(validUser));
 
       alert(`Welcome ${validUser.name}!`);
 
@@ -48,54 +44,56 @@ function Login() {
 
   return (
     <div className="auth-container">
-      {/* Left Side */}
+      {/* Left Section */}
       <div className="auth-left">
         <h1>
           TRIP<span>ZY</span>
         </h1>
 
         <p>
-          Welcome back! Login to continue exploring amazing
-          destinations and unforgettable adventures with Tripzy.
+          Welcome back! Login to continue exploring amazing destinations and
+          unforgettable adventures with Tripzy.
         </p>
       </div>
 
-      {/* Right Side */}
+      {/* Right Section */}
       <div className="auth-right">
         <div className="auth-card">
           <h2>Welcome Back</h2>
 
-          <p className="auth-subtitle">
-            Login to your account
-          </p>
+          <p className="auth-subtitle">Login to your account</p>
 
           <form onSubmit={handleLogin}>
             <input
               type="text"
               placeholder="Username"
               value={username}
-              onChange={(e) =>
-                setUsername(e.target.value)
-              }
+              onChange={(e) => setUsername(e.target.value)}
               required
             />
 
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) =>
-                setPassword(e.target.value)
-              }
-              required
-            />
+            <div className="password-container">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
 
-            <button type="submit">
+              <button
+                type="button"
+                className="show-btn"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
+            </div>
+
+            <button type="submit" className="login-btn">
               Login
             </button>
           </form>
-
-         
 
           <p className="auth-footer">
             Don't have an account?

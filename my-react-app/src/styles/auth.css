@@ -3,7 +3,7 @@
   display: flex;
 }
 
-/* LEFT SIDE */
+
 
 .auth-left {
   flex: 1;
@@ -36,7 +36,6 @@
   line-height: 1.8;
 }
 
-/* RIGHT SIDE */
 
 .auth-right {
   flex: 1;
@@ -82,7 +81,7 @@
   border-radius: 12px;
   background: #ff7e01;
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   transition: .3s;
 }

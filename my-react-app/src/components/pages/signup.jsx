@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/auth.css";
 
 function Signup() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] =
+    useState(false);
+
   return (
     <div className="auth-container">
-      {/* Left Side */}
       <div className="auth-left">
         <h1>
           TRIP<span>ZY</span>
@@ -17,7 +20,6 @@ function Signup() {
         </p>
       </div>
 
-      {/* Right Side */}
       <div className="auth-right">
         <div className="auth-card">
           <h2>Create Account</h2>
@@ -33,25 +35,59 @@ function Signup() {
               required
             />
 
-            
-
             <input
               type="tel"
               placeholder="Phone Number"
               required
             />
 
-            <input
-              type="password"
-              placeholder="Password"
-              required
-            />
+            <div className="password-container">
+              <input
+                type={
+                  showPassword
+                    ? "text"
+                    : "password"
+                }
+                placeholder="Password"
+                required
+              />
 
-            <input
-              type="password"
-              placeholder="Confirm Password"
-              required
-            />
+              <button
+                type="button"
+                className="show-btn"
+                onClick={() =>
+                  setShowPassword(!showPassword)
+                }
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
+            </div>
+
+            <div className="password-container">
+              <input
+                type={
+                  showConfirmPassword
+                    ? "text"
+                    : "password"
+                }
+                placeholder="Confirm Password"
+                required
+              />
+
+              <button
+                type="button"
+                className="show-btn"
+                onClick={() =>
+                  setShowConfirmPassword(
+                    !showConfirmPassword
+                  )
+                }
+              >
+                {showConfirmPassword
+                  ? "Hide"
+                  : "Show"}
+              </button>
+            </div>
 
             <button type="submit">
               Create Account
