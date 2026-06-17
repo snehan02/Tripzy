@@ -29,23 +29,32 @@ function Tours() {
     let filtered = [...tours];
 
     if (selectedCountry !== "All") {
-      filtered = filtered.filter((tour) => tour.country === selectedCountry);
+      filtered = filtered.filter(
+        (tour) => tour.country === selectedCountry
+      );
     }
 
     if (selectedState !== "All") {
-      filtered = filtered.filter((tour) => tour.state === selectedState);
+      filtered = filtered.filter(
+        (tour) => tour.state === selectedState
+      );
     }
 
     if (searchTerm) {
       filtered = filtered.filter((tour) =>
-        tour.title.toLowerCase().includes(searchTerm.toLowerCase()),
+        tour.title
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase())
       );
     }
 
     setFilteredTours(filtered);
   }, [searchTerm, selectedCountry, selectedState, tours]);
 
-  const countries = ["All", ...new Set(tours.map((tour) => tour.country))];
+  const countries = [
+    "All",
+    ...new Set(tours.map((tour) => tour.country)),
+  ];
 
   const states = [
     "All",
@@ -53,83 +62,107 @@ function Tours() {
       tours
         .filter(
           (tour) =>
-            selectedCountry === "All" || tour.country === selectedCountry,
+            selectedCountry === "All" ||
+            tour.country === selectedCountry
         )
-        .map((tour) => tour.state),
+        .map((tour) => tour.state)
     ),
   ];
 
   return (
     <>
-    <Navbar/>
-    <section className="tours-page">
-      <div className="tours-header">
-        <h1>Explore Our Tours</h1>
-        <p>Discover breathtaking destinations around the world.</p>
-      </div>
+      <Navbar />
 
-      <div className="filter-container">
-        <input
-          type="text"
-          placeholder="Search Tours..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+      <section className="tours-page">
+        <div className="tours-header">
+          <h1>Explore Our Tours</h1>
+          <p>
+            Discover breathtaking destinations around
+            the world.
+          </p>
+        </div>
 
-        <select
-          value={selectedCountry}
-          onChange={(e) => {
-            setSelectedCountry(e.target.value);
-            setSelectedState("All");
-          }}
-        >
-          {countries.map((country) => (
-            <option key={country} value={country}>
-              {country}
-            </option>
-          ))}
-        </select>
+        <div className="filter-container">
+          <input
+            type="text"
+            placeholder="Search Tours..."
+            value={searchTerm}
+            onChange={(e) =>
+              setSearchTerm(e.target.value)
+            }
+          />
 
-        <select
-          value={selectedState}
-          onChange={(e) => setSelectedState(e.target.value)}
-        >
-          {states.map((state) => (
-            <option key={state} value={state}>
-              {state}
-            </option>
-          ))}
-        </select>
-      </div>
+          <select
+            value={selectedCountry}
+            onChange={(e) => {
+              setSelectedCountry(e.target.value);
+              setSelectedState("All");
+            }}
+          >
+            {countries.map((country) => (
+              <option
+                key={country}
+                value={country}
+              >
+                {country}
+              </option>
+            ))}
+          </select>
 
-      {loading ? (
-        <h2 className="loading">Loading Tours...</h2>
-      ) : (
-        <div className="tour-grid">
-          {filteredTours.map((tour) => (
-            <div className="tour-card" key={tour.id}>
-              <img src={tour.image} alt={tour.title} />
+          <select
+            value={selectedState}
+            onChange={(e) =>
+              setSelectedState(e.target.value)
+            }
+          >
+            {states.map((state) => (
+              <option key={state} value={state}>
+                {state}
+              </option>
+            ))}
+          </select>
+        </div>
 
-              <div className="tour-info">
-                <h3>{tour.title}</h3>
+        {loading ? (
+          <h2 className="loading">
+            Loading Tours...
+          </h2>
+        ) : (
+          <div className="tours-grid">
+            {filteredTours.map((tour) => (
+              <div
+                className="tour-page-card"
+                key={tour.id}
+              >
+                <img
+                  src={tour.image}
+                  alt={tour.title}
+                />
 
-                <p>
-                   {tour.state}, {tour.country}
-                </p>
+                <div className="tour-page-info">
+                  <h3>{tour.title}</h3>
 
-                <p>{tour.duration}</p>
+                  <p>
+                    {tour.state}, {tour.country}
+                  </p>
 
-                <div className="tour-bottom">
-                  <span>₹{tour.price.toLocaleString()}</span>
+                  <p>{tour.duration}</p>
 
-                  <button className = "book-btn">Book Now</button>
+                  <div className="tour-bottom">
+                    <span>
+                      ₹{tour.price.toLocaleString()}
+                    </span>
+
+                    <button className="book-btn">
+                      Book Now
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      )}
-    </section>
+            ))}
+          </div>
+        )}
+      </section>
     </>
   );
 }
