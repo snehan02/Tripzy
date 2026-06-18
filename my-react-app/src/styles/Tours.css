@@ -128,6 +128,46 @@
   }
 }
 
+
+.tour-details {
+  padding: 50px 8%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.detail-image {
+  width: 100%;
+  height: 500px;
+
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.detail-content h1 {
+  margin-bottom: 20px;
+}
+
+.detail-content p {
+  margin: 15px 0;
+  line-height: 1.8;
+}
+
+.detail-content button {
+  margin-top: 20px;
+
+  padding: 14px 30px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #0077ff;
+  color: white;
+
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .tours-grid {
     grid-template-columns: 1fr;
