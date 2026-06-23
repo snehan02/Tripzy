@@ -19,7 +19,7 @@ function Navbar() {
         TRIP<span>ZY</span>
       </div>
 
-      {/* Right Side */}
+    
       <div className="nav-right">
         <ul className="nav-links">
           <li>
